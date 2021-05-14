@@ -150,13 +150,7 @@ class FirebaseVisionImagePlaneMetadata {
     required this.bytesPerRow,
     required this.height,
     required this.width,
-  })  : assert(
-          defaultTargetPlatform != TargetPlatform.iOS,
-        ),
-        assert(defaultTargetPlatform != TargetPlatform.iOS),
-        assert(
-          defaultTargetPlatform != TargetPlatform.iOS,
-        );
+  });
 
   /// The row stride for this color plane, in bytes.
   final int bytesPerRow;
@@ -189,9 +183,6 @@ class FirebaseVisionImageMetadata {
     this.rotation = ImageRotation.rotation0,
   })  : assert(
           defaultTargetPlatform != TargetPlatform.iOS || rawFormat != null,
-        ),
-        assert(
-          defaultTargetPlatform != TargetPlatform.iOS,
         ),
         assert(
           defaultTargetPlatform != TargetPlatform.iOS || planeData.isNotEmpty,
